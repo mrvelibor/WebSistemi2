@@ -1,7 +1,5 @@
 package com.mrvelibor.websistemi2.controllers;
 
-import java.util.Locale;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -12,16 +10,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mrvelibor.websistemi2.Soba;
+import com.mrvelibor.websistemi2.SobaDao;
 
 @Controller
 public class SobaController {
 
 	@Autowired
 	private MessageSource messageSource;
+	
+	@Autowired
+	private SobaDao sobaDao;
 
    @RequestMapping(value = "/soba", method = RequestMethod.GET)
    public ModelAndView soba() {
-	  System.out.println("Pozivam message source");
       return new ModelAndView("novaSoba", "command", new Soba());
    }
    
@@ -33,6 +34,7 @@ public class SobaController {
 	      model.addAttribute("tv", soba.getTv());
 	      model.addAttribute("klima", soba.getKlima());
 	      model.addAttribute("cenaPoDanu", soba.getCenaPoDanu());
+	      sobaDao.addSoba();
       return "soba";
    }
 }
