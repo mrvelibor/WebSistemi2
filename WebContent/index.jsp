@@ -11,6 +11,6 @@ body {
 	<h1>
 		Web Sistemi 2
 	</h1>
-	<a href="pozdrav.html">Pozdrav</a>
+	<a href="soba.html">Dodaj sobu</a>
 </body>
 </html>
