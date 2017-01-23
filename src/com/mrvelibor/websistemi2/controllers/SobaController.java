@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mrvelibor.websistemi2.Soba;
-import com.mrvelibor.websistemi2.SobaDao;
+import com.mrvelibor.websistemi2.dao.SobaDao;
 
 @Controller
 public class SobaController {

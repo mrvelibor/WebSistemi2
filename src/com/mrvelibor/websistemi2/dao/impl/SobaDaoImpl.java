@@ -1,4 +1,6 @@
-package com.mrvelibor.websistemi2;
+package com.mrvelibor.websistemi2.dao.impl;
+
+import com.mrvelibor.websistemi2.dao.SobaDao;
 
 public class SobaDaoImpl implements SobaDao {
 

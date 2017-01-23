@@ -22,12 +22,12 @@
         <td><form:checkbox path="kupatilo" /></td>
     </tr>
     <tr>
-        <td><form:label path="tv"><spring:message code="soba.tv"/></form:label></td>
-        <td><form:checkbox path="tv" /></td>
-    </tr>
-    <tr>
         <td><form:label path="klima"><spring:message code="soba.klima"/></form:label></td>
         <td><form:checkbox path="klima" /></td>
+    </tr>
+    <tr>
+        <td><form:label path="tv"><spring:message code="soba.tv"/></form:label></td>
+        <td><form:checkbox path="tv" /></td>
     </tr>
     <tr>
         <td><form:label path="cenaPoDanu"><spring:message code="soba.cenaPoDanu"/></form:label></td>
