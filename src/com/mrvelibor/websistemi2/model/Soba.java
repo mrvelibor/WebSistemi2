@@ -1,4 +1,4 @@
-package com.mrvelibor.websistemi2;
+package com.mrvelibor.websistemi2.model;
 
 public class Soba {
 

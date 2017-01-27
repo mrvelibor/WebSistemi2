@@ -7,7 +7,8 @@
 	http://www.springframework.org/schema/security/spring-security-4.2.xsd">
 	
 	<http auto-config="true" use-expressions="true">
-		<intercept-url pattern="/soba**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/soba**" access="hasRole('ROLE_KORISNIK')" />
+		<intercept-url pattern="/korisnik**" access="hasRole('ROLE_ADMIN')" />
 		<access-denied-handler error-page="/403" />
 		<form-login
 		login-page="/login"

@@ -4,11 +4,24 @@
 		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">		
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/test" />
 		<property name="username" value="root" />
-		<property name="password" value="" />	
+		<property name="password" value="" />
+	</bean>
+
+	<bean name="korisnikDao" class="com.mrvelibor.websistemi2.dao.impl.KorisnikDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean><bean name="korisnikRolaDao" class="com.mrvelibor.websistemi2.dao.impl.KorisnikRolaDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean><bean name="sobaDao" class="com.mrvelibor.websistemi2.dao.impl.SobaDaoImpl">
+		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
 </beans>

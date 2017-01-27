@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mrvelibor.websistemi2.Soba;
 import com.mrvelibor.websistemi2.dao.SobaDao;
+import com.mrvelibor.websistemi2.model.Soba;
 
 @Controller
 public class SobaController {
@@ -34,7 +34,7 @@ public class SobaController {
 	      model.addAttribute("tv", soba.getTv());
 	      model.addAttribute("klima", soba.getKlima());
 	      model.addAttribute("cenaPoDanu", soba.getCenaPoDanu());
-	      sobaDao.addSoba();
+	      sobaDao.addSoba(soba);
       return "soba";
    }
 }
