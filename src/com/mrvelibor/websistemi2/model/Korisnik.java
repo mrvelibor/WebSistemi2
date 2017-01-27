@@ -1,9 +1,20 @@
 package com.mrvelibor.websistemi2.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "korisnik")
 public class Korisnik {
 
+	@Id
+	@Column(name = "username", nullable = false)
 	private String username;
+	@Column(name = "password", nullable = false)
 	private String password;
+	@Column(name = "enabled")
 	private boolean enabled;
 	
 	public String getUsername() {
